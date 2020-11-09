@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExtClass.cs" />
+    <Compile Include="JustClass.cs" />
     <Compile Include="MyClassAnother.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
