@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AssemblyBrowser"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="AssemblyBrowser" Height="600" Width="800" >
     <Window.DataContext>
         <local:ViewModel/>
     </Window.DataContext>
-    <Grid>
-        <DockPanel LastChildFill="True">
-            <Menu DockPanel.Dock="Top">
+    <Grid Background="PaleVioletRed">
+        <DockPanel LastChildFill="True" Background="PaleVioletRed">
+            <Menu DockPanel.Dock="Top" FontSize="14" Background="MediumPurple" FontFamily="Technical Italic, Comic Sans MS, Arial">
                 <MenuItem Header="File">
                     <MenuItem Header="Open" Command="{Binding OpenFile}"></MenuItem>
                 </MenuItem>
             </Menu>
-            <StatusBar DockPanel.Dock="Bottom">
+            <StatusBar DockPanel.Dock="Bottom" Background="MediumPurple" FontSize="14" FontFamily="Technical Italic, Comic Sans MS, Arial">
                 <StatusBarItem>
                     <TextBlock Text="{Binding OpenedFile}"/>
                 </StatusBarItem>
             </StatusBar>
-            <TreeView ItemsSource="{Binding Path=Containers}" DockPanel.Dock="Top">
+            <TreeView ItemsSource="{Binding Path=Containers}" DockPanel.Dock="Top" Background="Plum" FontSize="16" FontFamily="Technical Italic, Comic Sans MS, Arial">
                 <TreeView.ItemTemplate>
                     <HierarchicalDataTemplate ItemsSource="{Binding Path=Members}">
                         <TextBlock Text="{Binding DeclarationName, UpdateSourceTrigger=PropertyChanged}"/>
